@@ -1,0 +1,347 @@
+# command-line-arguments
+main.main STEXT size=352 args=0x0 locals=0x78 funcid=0x0 align=0x0
+	0x0000 00000 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	TEXT	main.main(SB), ABIInternal, $128-0
+	0x0000 00000 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	MOVD	16(g), R16
+	0x0004 00004 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	PCDATA	$0, $-2
+	0x0004 00004 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	CMP	R16, RSP
+	0x0008 00008 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	BLS	336
+	0x000c 00012 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	PCDATA	$0, $-1
+	0x000c 00012 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	MOVD.W	R30, -128(RSP)
+	0x0010 00016 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	MOVD	R29, -8(RSP)
+	0x0014 00020 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	SUB	$8, RSP, R29
+	0x0018 00024 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	FUNCDATA	$0, gclocals·ykHN0vawYuq1dUW4zEe2gA==(SB)
+	0x0018 00024 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	FUNCDATA	$1, gclocals·rbz4k53uTDu0kyo+jt0RpA==(SB)
+	0x0018 00024 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	FUNCDATA	$2, main.main.stkobj(SB)
+	0x0018 00024 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:9)	MOVD	$type:int32(SB), R0
+	0x0020 00032 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:9)	PCDATA	$1, $0
+	0x0020 00032 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:9)	CALL	runtime.newobject(SB)
+	0x0024 00036 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:12)	LDARW	(R0), R1
+	0x0028 00040 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:13)	ADD	$1, R1, R2
+	0x002c 00044 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:13)	PCDATA	$0, $-3
+	0x002c 00044 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	MOVBU	runtime.arm64HasATOMICS(SB), R3
+	0x0034 00052 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	PCDATA	$0, $-1
+	0x0034 00052 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	TBZ	$0, R3, 76
+	0x0038 00056 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	PCDATA	$0, $-2
+	0x0038 00056 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	MOVW	R1, R27
+	0x003c 00060 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	CASALW	R27, (R0), R2
+	0x0040 00064 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	CMPW	R1, R27
+	0x0044 00068 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	CSET	EQ, R5
+	0x0048 00072 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	JMP	100
+	0x004c 00076 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	LDAXRW	(R0), R27
+	0x0050 00080 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	CMPW	R1, R27
+	0x0054 00084 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	BNE	96
+	0x0058 00088 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	STLXRW	R2, (R0), R27
+	0x005c 00092 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	CBNZ	R27, 76
+	0x0060 00096 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:14)	CSET	EQ, R5
+	0x0064 00100 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:9)	PCDATA	$0, $-1
+	0x0064 00100 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:9)	MOVD	R0, main.&value-72(SP)
+	0x0068 00104 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:16)	TBZ	$0, R5, 172
+	0x006c 00108 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	STP	(ZR, ZR), main..autotmp_23-48(SP)
+	0x0070 00112 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	MOVD	$type:string(SB), R5
+	0x0078 00120 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	MOVD	R5, main..autotmp_23-48(SP)
+	0x007c 00124 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	MOVD	$main..stmp_0(SB), R6
+	0x0084 00132 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	MOVD	R6, main..autotmp_23-40(SP)
+	0x0088 00136 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	PCDATA	$0, $-4
+	0x0088 00136 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	os.Stdout(SB), R1
+	0x0090 00144 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	PCDATA	$0, $-1
+	0x0090 00144 (<unknown line number>)	NOP
+	0x0090 00144 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$go:itab.*os.File,io.Writer(SB), R0
+	0x0098 00152 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$main..autotmp_23-48(SP), R2
+	0x009c 00156 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$1, R3
+	0x00a0 00160 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	R3, R4
+	0x00a4 00164 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	PCDATA	$1, $1
+	0x00a4 00164 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	CALL	fmt.Fprintln(SB)
+	0x00a8 00168 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:17)	JMP	232
+	0x00ac 00172 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:19)	STP	(ZR, ZR), main..autotmp_25-64(SP)
+	0x00b0 00176 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:19)	MOVD	$type:string(SB), R5
+	0x00b8 00184 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:19)	MOVD	R5, main..autotmp_25-64(SP)
+	0x00bc 00188 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:19)	MOVD	$main..stmp_1(SB), R6
+	0x00c4 00196 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:19)	MOVD	R6, main..autotmp_25-56(SP)
+	0x00c8 00200 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:19)	PCDATA	$0, $-3
+	0x00c8 00200 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	os.Stdout(SB), R1
+	0x00d0 00208 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	PCDATA	$0, $-1
+	0x00d0 00208 (<unknown line number>)	NOP
+	0x00d0 00208 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$go:itab.*os.File,io.Writer(SB), R0
+	0x00d8 00216 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$main..autotmp_25-64(SP), R2
+	0x00dc 00220 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$1, R3
+	0x00e0 00224 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	R3, R4
+	0x00e4 00228 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	CALL	fmt.Fprintln(SB)
+	0x00e8 00232 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	main.&value-72(SP), R1
+	0x00ec 00236 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	LDARW	(R1), R0
+	0x00f0 00240 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	STP	(ZR, ZR), main..autotmp_27-32(SP)
+	0x00f4 00244 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	STP	(ZR, ZR), main..autotmp_27-16(SP)
+	0x00f8 00248 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	$type:string(SB), R1
+	0x0100 00256 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	R1, main..autotmp_27-32(SP)
+	0x0104 00260 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	$main..stmp_2(SB), R1
+	0x010c 00268 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	R1, main..autotmp_27-24(SP)
+	0x0110 00272 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	PCDATA	$1, $2
+	0x0110 00272 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	CALL	runtime.convT32(SB)
+	0x0114 00276 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	$type:int32(SB), R1
+	0x011c 00284 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	R1, main..autotmp_27-16(SP)
+	0x0120 00288 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	MOVD	R0, main..autotmp_27-8(SP)
+	0x0124 00292 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:22)	PCDATA	$0, $-4
+	0x0124 00292 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	os.Stdout(SB), R1
+	0x012c 00300 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	PCDATA	$0, $-1
+	0x012c 00300 (<unknown line number>)	NOP
+	0x012c 00300 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$go:itab.*os.File,io.Writer(SB), R0
+	0x0134 00308 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$main..autotmp_27-32(SP), R2
+	0x0138 00312 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	$2, R3
+	0x013c 00316 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	MOVD	R3, R4
+	0x0140 00320 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	PCDATA	$1, $0
+	0x0140 00320 (/opt/homebrew/Cellar/go/1.21.6/libexec/src/fmt/print.go:314)	CALL	fmt.Fprintln(SB)
+	0x0144 00324 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:23)	LDP	-8(RSP), (R29, R30)
+	0x0148 00328 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:23)	ADD	$128, RSP
+	0x014c 00332 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:23)	RET	(R30)
+	0x0150 00336 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:23)	NOP
+	0x0150 00336 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	PCDATA	$1, $-1
+	0x0150 00336 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	PCDATA	$0, $-2
+	0x0150 00336 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	MOVD	R30, R3
+	0x0154 00340 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	CALL	runtime.morestack_noctxt(SB)
+	0x0158 00344 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	PCDATA	$0, $-1
+	0x0158 00344 (/Users/apoorvvardhan/IronMan/courses/system-design-arpit/week-3/opt-locking/main.go:8)	JMP	0
+	0x0000 90 0b 40 f9 ff 63 30 eb 49 0a 00 54 fe 0f 18 f8  ..@..c0.I..T....
+	0x0010 fd 83 1f f8 fd 23 00 d1 00 00 00 90 00 00 00 91  .....#..........
+	0x0020 00 00 00 94 01 fc df 88 22 04 00 91 1b 00 00 90  ........".......
+	0x0030 63 03 40 39 c3 00 00 36 3b 7c 40 93 02 fc fb 88  c.@9...6;|@.....
+	0x0040 7f 03 01 6b e5 17 9f 9a 07 00 00 14 1b fc 5f 88  ...k.........._.
+	0x0050 7f 03 01 6b 61 00 00 54 02 fc 1b 88 9b ff ff b5  ...ka..T........
+	0x0060 e5 17 9f 9a e0 1b 00 f9 25 02 00 36 ff ff 04 a9  ........%..6....
+	0x0070 05 00 00 90 a5 00 00 91 e5 27 00 f9 06 00 00 90  .........'......
+	0x0080 c6 00 00 91 e6 2b 00 f9 1b 00 00 90 61 03 40 f9  .....+......a.@.
+	0x0090 00 00 00 90 00 00 00 91 e2 23 01 91 e3 03 40 b2  .........#....@.
+	0x00a0 e4 03 03 aa 00 00 00 94 10 00 00 14 ff ff 03 a9  ................
+	0x00b0 05 00 00 90 a5 00 00 91 e5 1f 00 f9 06 00 00 90  ................
+	0x00c0 c6 00 00 91 e6 23 00 f9 1b 00 00 90 61 03 40 f9  .....#......a.@.
+	0x00d0 00 00 00 90 00 00 00 91 e2 e3 00 91 e3 03 40 b2  ..............@.
+	0x00e0 e4 03 03 aa 00 00 00 94 e1 1b 40 f9 20 fc df 88  ..........@. ...
+	0x00f0 ff ff 05 a9 ff ff 06 a9 01 00 00 90 21 00 00 91  ............!...
+	0x0100 e1 2f 00 f9 01 00 00 90 21 00 00 91 e1 33 00 f9  ./......!....3..
+	0x0110 00 00 00 94 01 00 00 90 21 00 00 91 e1 37 00 f9  ........!....7..
+	0x0120 e0 3b 00 f9 1b 00 00 90 61 03 40 f9 00 00 00 90  .;......a.@.....
+	0x0130 00 00 00 91 e2 63 01 91 e3 03 7f b2 e4 03 03 aa  .....c..........
+	0x0140 00 00 00 94 fd fb 7f a9 ff 03 02 91 c0 03 5f d6  .............._.
+	0x0150 e3 03 1e aa 00 00 00 94 aa ff ff 17 00 00 00 00  ................
+	rel 0+0 t=23 type:string+0
+	rel 0+0 t=23 type:*os.File+0
+	rel 0+0 t=23 type:string+0
+	rel 0+0 t=23 type:*os.File+0
+	rel 0+0 t=23 type:string+0
+	rel 0+0 t=23 type:int32+0
+	rel 0+0 t=23 type:*os.File+0
+	rel 24+8 t=3 type:int32+0
+	rel 32+4 t=9 runtime.newobject+0
+	rel 44+8 t=38 runtime.arm64HasATOMICS+0
+	rel 112+8 t=3 type:string+0
+	rel 124+8 t=3 main..stmp_0+0
+	rel 136+8 t=41 os.Stdout+0
+	rel 144+8 t=3 go:itab.*os.File,io.Writer+0
+	rel 164+4 t=9 fmt.Fprintln+0
+	rel 176+8 t=3 type:string+0
+	rel 188+8 t=3 main..stmp_1+0
+	rel 200+8 t=41 os.Stdout+0
+	rel 208+8 t=3 go:itab.*os.File,io.Writer+0
+	rel 228+4 t=9 fmt.Fprintln+0
+	rel 248+8 t=3 type:string+0
+	rel 260+8 t=3 main..stmp_2+0
+	rel 272+4 t=9 runtime.convT32+0
+	rel 276+8 t=3 type:int32+0
+	rel 292+8 t=41 os.Stdout+0
+	rel 300+8 t=3 go:itab.*os.File,io.Writer+0
+	rel 320+4 t=9 fmt.Fprintln+0
+	rel 340+4 t=9 runtime.morestack_noctxt+0
+type:.eq.[2]interface {} STEXT dupok size=176 args=0x10 locals=0x28 funcid=0x0 align=0x0
+	0x0000 00000 (<autogenerated>:1)	TEXT	type:.eq.[2]interface {}(SB), DUPOK|ABIInternal, $48-16
+	0x0000 00000 (<autogenerated>:1)	MOVD	16(g), R16
+	0x0004 00004 (<autogenerated>:1)	PCDATA	$0, $-2
+	0x0004 00004 (<autogenerated>:1)	CMP	R16, RSP
+	0x0008 00008 (<autogenerated>:1)	BLS	144
+	0x000c 00012 (<autogenerated>:1)	PCDATA	$0, $-1
+	0x000c 00012 (<autogenerated>:1)	MOVD.W	R30, -48(RSP)
+	0x0010 00016 (<autogenerated>:1)	MOVD	R29, -8(RSP)
+	0x0014 00020 (<autogenerated>:1)	SUB	$8, RSP, R29
+	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$0, gclocals·TjPuuCwdlCpTaRQGRKTrYw==(SB)
+	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$1, gclocals·J5F+7Qw7O7ve2QcWC7DpeQ==(SB)
+	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$5, type:.eq.[2]interface {}.arginfo1(SB)
+	0x0018 00024 (<autogenerated>:1)	FUNCDATA	$6, type:.eq.[2]interface {}.argliveinfo(SB)
+	0x0018 00024 (<autogenerated>:1)	PCDATA	$3, $1
+	0x0018 00024 (<autogenerated>:1)	MOVD	R0, main.p(FP)
+	0x001c 00028 (<autogenerated>:1)	MOVD	R1, main.q+8(FP)
+	0x0020 00032 (<autogenerated>:1)	PCDATA	$3, $-1
+	0x0020 00032 (<autogenerated>:1)	MOVD	ZR, R2
+	0x0024 00036 (<autogenerated>:1)	JMP	52
+	0x0028 00040 (<autogenerated>:1)	ADD	$1, R3, R2
+	0x002c 00044 (<autogenerated>:1)	MOVD	main.p(FP), R0
+	0x0030 00048 (<autogenerated>:1)	MOVD	main.q+8(FP), R1
+	0x0034 00052 (<autogenerated>:1)	CMP	$2, R2
+	0x0038 00056 (<autogenerated>:1)	BGE	128
+	0x003c 00060 (<autogenerated>:1)	LSL	$4, R2, R3
+	0x0040 00064 (<autogenerated>:1)	MOVD	(R0)(R3), R4
+	0x0044 00068 (<autogenerated>:1)	MOVD	(R1)(R3), R3
+	0x0048 00072 (<autogenerated>:1)	ADD	R2<<4, R1, R5
+	0x004c 00076 (<autogenerated>:1)	ADD	R2<<4, R0, R6
+	0x0050 00080 (<autogenerated>:1)	CMP	R4, R3
+	0x0054 00084 (<autogenerated>:1)	BNE	124
+	0x0058 00088 (<autogenerated>:1)	MOVD	R2, main..autotmp_6-8(SP)
+	0x005c 00092 (<autogenerated>:1)	MOVD	8(R6), R1
+	0x0060 00096 (<autogenerated>:1)	MOVD	8(R5), R2
+	0x0064 00100 (<autogenerated>:1)	MOVD	R4, R0
+	0x0068 00104 (<autogenerated>:1)	PCDATA	$1, $0
+	0x0068 00104 (<autogenerated>:1)	CALL	runtime.efaceeq(SB)
+	0x006c 00108 (<autogenerated>:1)	MOVD	main..autotmp_6-8(SP), R3
+	0x0070 00112 (<autogenerated>:1)	CMP	$2, R3
+	0x0074 00116 (<autogenerated>:1)	TBNZ	$0, R0, 40
+	0x0078 00120 (<autogenerated>:1)	JMP	128
+	0x007c 00124 (<autogenerated>:1)	CMP	$2, R2
+	0x0080 00128 (<autogenerated>:1)	CSET	GE, R0
+	0x0084 00132 (<autogenerated>:1)	LDP	-8(RSP), (R29, R30)
+	0x0088 00136 (<autogenerated>:1)	ADD	$48, RSP
+	0x008c 00140 (<autogenerated>:1)	RET	(R30)
+	0x0090 00144 (<autogenerated>:1)	NOP
+	0x0090 00144 (<autogenerated>:1)	PCDATA	$1, $-1
+	0x0090 00144 (<autogenerated>:1)	PCDATA	$0, $-2
+	0x0090 00144 (<autogenerated>:1)	MOVD	R0, 8(RSP)
+	0x0094 00148 (<autogenerated>:1)	MOVD	R1, 16(RSP)
+	0x0098 00152 (<autogenerated>:1)	MOVD	R30, R3
+	0x009c 00156 (<autogenerated>:1)	CALL	runtime.morestack_noctxt(SB)
+	0x00a0 00160 (<autogenerated>:1)	MOVD	8(RSP), R0
+	0x00a4 00164 (<autogenerated>:1)	MOVD	16(RSP), R1
+	0x00a8 00168 (<autogenerated>:1)	PCDATA	$0, $-1
+	0x00a8 00168 (<autogenerated>:1)	JMP	0
+	0x0000 90 0b 40 f9 ff 63 30 eb 49 04 00 54 fe 0f 1d f8  ..@..c0.I..T....
+	0x0010 fd 83 1f f8 fd 23 00 d1 e0 1f 00 f9 e1 23 00 f9  .....#.......#..
+	0x0020 e2 03 1f aa 04 00 00 14 62 04 00 91 e0 1f 40 f9  ........b.....@.
+	0x0030 e1 23 40 f9 5f 08 00 f1 4a 02 00 54 43 ec 7c d3  .#@._...J..TC.|.
+	0x0040 04 68 63 f8 23 68 63 f8 25 10 02 8b 06 10 02 8b  .hc.#hc.%.......
+	0x0050 7f 00 04 eb 41 01 00 54 e2 13 00 f9 c1 04 40 f9  ....A..T......@.
+	0x0060 a2 04 40 f9 e0 03 04 aa 00 00 00 94 e3 13 40 f9  ..@...........@.
+	0x0070 7f 08 00 f1 a0 fd 07 37 02 00 00 14 5f 08 00 f1  .......7...._...
+	0x0080 e0 b7 9f 9a fd fb 7f a9 ff c3 00 91 c0 03 5f d6  .............._.
+	0x0090 e0 07 00 f9 e1 0b 00 f9 e3 03 1e aa 00 00 00 94  ................
+	0x00a0 e0 07 40 f9 e1 0b 40 f9 d6 ff ff 17 00 00 00 00  ..@...@.........
+	rel 104+4 t=9 runtime.efaceeq+0
+	rel 156+4 t=9 runtime.morestack_noctxt+0
+go:cuinfo.producer.main SDWARFCUINFO dupok size=0
+	0x0000 2d 73 68 61 72 65 64 20 72 65 67 61 62 69        -shared regabi
+go:cuinfo.packagename.main SDWARFCUINFO dupok size=0
+	0x0000 6d 61 69 6e                                      main
+go:info.fmt.Println$abstract SDWARFABSFCN dupok size=44
+	0x0000 05 66 6d 74 2e 50 72 69 6e 74 6c 6e 00 01 b9 02  .fmt.Println....
+	0x0010 01 13 61 00 00 00 00 00 00 13 6e 00 01 00 00 00  ..a.......n.....
+	0x0020 00 13 65 72 72 00 01 00 00 00 00 00              ..err.......
+	rel 0+0 t=22 type:[]interface {}+0
+	rel 0+0 t=22 type:error+0
+	rel 0+0 t=22 type:int+0
+	rel 21+4 t=31 go:info.[]interface {}+0
+	rel 29+4 t=31 go:info.int+0
+	rel 39+4 t=31 go:info.error+0
+go:itab.*os.File,io.Writer SRODATA dupok size=32
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 5a 22 ee 60 00 00 00 00 00 00 00 00 00 00 00 00  Z".`............
+	rel 0+8 t=1 type:io.Writer+0
+	rel 8+8 t=1 type:*os.File+0
+	rel 24+8 t=-32767 os.(*File).Write+0
+main..inittask SNOPTRDATA size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+0 t=81 fmt..inittask+0
+go:string."CAS succeeded" SRODATA dupok size=13
+	0x0000 43 41 53 20 73 75 63 63 65 65 64 65 64           CAS succeeded
+go:string."CAS failed" SRODATA dupok size=10
+	0x0000 43 41 53 20 66 61 69 6c 65 64                    CAS failed
+go:string."New value:" SRODATA dupok size=10
+	0x0000 4e 65 77 20 76 61 6c 75 65 3a                    New value:
+main..stmp_0 SRODATA static size=16
+	0x0000 00 00 00 00 00 00 00 00 0d 00 00 00 00 00 00 00  ................
+	rel 0+8 t=1 go:string."CAS succeeded"+0
+main..stmp_1 SRODATA static size=16
+	0x0000 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00  ................
+	rel 0+8 t=1 go:string."CAS failed"+0
+main..stmp_2 SRODATA static size=16
+	0x0000 00 00 00 00 00 00 00 00 0a 00 00 00 00 00 00 00  ................
+	rel 0+8 t=1 go:string."New value:"+0
+runtime.nilinterequal·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.nilinterequal+0
+runtime.memequal64·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.memequal64+0
+runtime.gcbits.0100000000000000 SRODATA dupok size=8
+	0x0000 01 00 00 00 00 00 00 00                          ........
+type:.namedata.*[1]interface {}- SRODATA dupok size=18
+	0x0000 00 10 2a 5b 31 5d 69 6e 74 65 72 66 61 63 65 20  ..*[1]interface 
+	0x0010 7b 7d                                            {}
+type:*[1]interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 a8 0e 57 36 08 08 08 36 00 00 00 00 00 00 00 00  ..W6...6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.0100000000000000+0
+	rel 40+4 t=5 type:.namedata.*[1]interface {}-+0
+	rel 48+8 t=1 type:[1]interface {}+0
+runtime.gcbits.0200000000000000 SRODATA dupok size=8
+	0x0000 02 00 00 00 00 00 00 00                          ........
+type:[1]interface {} SRODATA dupok size=72
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 6e 20 6a 3d 02 08 08 11 00 00 00 00 00 00 00 00  n j=............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 01 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.nilinterequal·f+0
+	rel 32+8 t=1 runtime.gcbits.0200000000000000+0
+	rel 40+4 t=5 type:.namedata.*[1]interface {}-+0
+	rel 44+4 t=-32763 type:*[1]interface {}+0
+	rel 48+8 t=1 type:interface {}+0
+	rel 56+8 t=1 type:[]interface {}+0
+type:.eqfunc.[2]interface {} SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 type:.eq.[2]interface {}+0
+type:.namedata.*[2]interface {}- SRODATA dupok size=18
+	0x0000 00 10 2a 5b 32 5d 69 6e 74 65 72 66 61 63 65 20  ..*[2]interface 
+	0x0010 7b 7d                                            {}
+type:*[2]interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 53 dc 6b 00 08 08 08 36 00 00 00 00 00 00 00 00  S.k....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.0100000000000000+0
+	rel 40+4 t=5 type:.namedata.*[2]interface {}-+0
+	rel 48+8 t=1 type:[2]interface {}+0
+runtime.gcbits.0a00000000000000 SRODATA dupok size=8
+	0x0000 0a 00 00 00 00 00 00 00                          ........
+type:[2]interface {} SRODATA dupok size=72
+	0x0000 20 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00   ....... .......
+	0x0010 0a f3 b4 b4 02 08 08 11 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 02 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 type:.eqfunc.[2]interface {}+0
+	rel 32+8 t=1 runtime.gcbits.0a00000000000000+0
+	rel 40+4 t=5 type:.namedata.*[2]interface {}-+0
+	rel 44+4 t=-32763 type:*[2]interface {}+0
+	rel 48+8 t=1 type:interface {}+0
+	rel 56+8 t=1 type:[]interface {}+0
+type:.importpath.fmt. SRODATA dupok size=5
+	0x0000 00 03 66 6d 74                                   ..fmt
+type:.importpath.sync/atomic. SRODATA dupok size=13
+	0x0000 00 0b 73 79 6e 63 2f 61 74 6f 6d 69 63           ..sync/atomic
+gclocals·ykHN0vawYuq1dUW4zEe2gA== SRODATA dupok size=8
+	0x0000 03 00 00 00 00 00 00 00                          ........
+gclocals·rbz4k53uTDu0kyo+jt0RpA== SRODATA dupok size=14
+	0x0000 03 00 00 00 09 00 00 00 00 00 01 00 40 01        ............@.
+main.main.stkobj SRODATA static size=56
+	0x0000 03 00 00 00 00 00 00 00 c0 ff ff ff 10 00 00 00  ................
+	0x0010 10 00 00 00 00 00 00 00 d0 ff ff ff 10 00 00 00  ................
+	0x0020 10 00 00 00 00 00 00 00 e0 ff ff ff 20 00 00 00  ............ ...
+	0x0030 20 00 00 00 00 00 00 00                           .......
+	rel 20+4 t=5 runtime.gcbits.0200000000000000+0
+	rel 36+4 t=5 runtime.gcbits.0200000000000000+0
+	rel 52+4 t=5 runtime.gcbits.0a00000000000000+0
+gclocals·TjPuuCwdlCpTaRQGRKTrYw== SRODATA dupok size=10
+	0x0000 02 00 00 00 02 00 00 00 03 00                    ..........
+gclocals·J5F+7Qw7O7ve2QcWC7DpeQ== SRODATA dupok size=8
+	0x0000 02 00 00 00 00 00 00 00                          ........
+type:.eq.[2]interface {}.arginfo1 SRODATA static dupok size=3
+	0x0000 08 08 ff                                         ...
+type:.eq.[2]interface {}.argliveinfo SRODATA static dupok size=2
+	0x0000 00 00                                            ..
