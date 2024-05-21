@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/sony/sonyflake"
 	"log"
 	"strconv"
 	"strings"
@@ -30,6 +31,17 @@ func main() {
 	}
 	defer db.Close()
 
+	sf := useSonyflake()
+
+	id, err := sf.NextID()
+	fmt.Println("Sonyflake ID:", id)
+	id, err = sf.NextID()
+	fmt.Println("Sonyflake ID:", id)
+
+	createSnowflakeID()
+}
+
+func createSnowflakeID() {
 	now := time.Now()
 	// Convert to milliseconds since epoch
 	epochMillis := now.UnixNano() / int64(time.Millisecond)
@@ -47,7 +59,7 @@ func main() {
 		return
 	}
 
-	counterID := 2000 // Example max for 12 bits
+	counterID := 2000 // Would be incremented in reality with a mutex
 	if counterID >= (1 << 12) {
 		fmt.Println("CounterID too large to fit in 12 bits")
 		return
@@ -66,4 +78,13 @@ func main() {
 
 	fmt.Printf("Stored snowflakeID: %d\n", snowflakeID)
 	fmt.Printf("Binary Representation: %s\n", binaryStr)
+}
+
+func useSonyflake() *sonyflake.Sonyflake {
+	var st sonyflake.Settings
+	sf := sonyflake.NewSonyflake(st)
+	if sf == nil {
+		panic("failed to create Sonyflake")
+	}
+	return sf
 }
